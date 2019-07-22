@@ -7,5 +7,5 @@ RUN apt-get update\
 
 RUN chmod a+x ./pkg_install_ubuntu.sh \
   && ./pkg_install_ubuntu.sh -l c++ -l python -c --yes \
-  && dpkg -l | grep openrtm
+  && dpkg -l | grep openrtm | wc -l > /number
     

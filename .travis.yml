@@ -9,4 +9,4 @@ addons:
       - docker-ce
 
 script:
-- docker build -f Dockerfile . -t ubuntu1804
+  - docker build -f Dockerfile . -t ubuntu1804

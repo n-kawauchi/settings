@@ -19,7 +19,7 @@ RUN set -x \
   && export repo="http://openrtm.org/pub/Linux/ubuntu/ bionic"\
   && echo "deb $repo main" | tee -a /etc/apt/sources.list\
 # && apt-key adv --keyserver keys.gnupg.net --recv-keys 4BCE106E087AFAC0\
-  && wget https://openrtm.org/pub/openrtm.key\
+  && wget --no-check-certificate https://openrtm.org/pub/openrtm.key\
   && apt-key add openrtm.key\
   && apt-get autoclean\
   && apt-get -qq update\
